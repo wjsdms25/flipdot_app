@@ -1,0 +1,289 @@
+﻿<Window
+    FontFamily="./Fonts/#BAUHS93"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ToggleSwitch="clr-namespace:ToggleSwitch" x:Class="APP.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="812" Width="375">
+    <Grid
+
+        VerticalAlignment="Top" Margin="0,0,-5,-27.5" Height="812" Width="375">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="157*"/>
+            <ColumnDefinition Width="219*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="Main_page" Visibility="Visible" Margin="0,0,0,27" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="281*"/>
+                <RowDefinition Height="531*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="C:\Users\user\source\repos\APP\image\mainb.jpg"/>
+            </Grid.Background>
+
+
+            <Image Source="C:\Users\user\source\repos\APP\APP\text_i.png" Margin="4,111.5,300,366" Grid.Row="1"/>
+
+            <Image Source="C:\Users\user\source\repos\APP\APP\drawing (2).png" Margin="18,170,316,258" Grid.Row="1"/>
+            <TextBlock  FontFamily="./Resources/#NotoSans-Light" FontSize="25" x:Name="text_input_button" Margin="86,126,85,0" Grid.Row="1" TextWrapping="Wrap" Text="TEXT" VerticalAlignment="Top" Height="29"/>
+
+            <TextBlock FontFamily="./Resources/#NotoSans-Light" FontSize="10" HorizontalAlignment="Left" Margin="85,115,0,0" Grid.Row="1" TextWrapping="Wrap" Text="기분 좋은 하루" VerticalAlignment="Top"/>
+
+            <Image HorizontalAlignment="Left" Height="26" Margin="87,215,0,0" VerticalAlignment="Top" Width="32" Source="C:\Users\user\source\repos\APP\image\main\pixel-1.jpg" Grid.Row="1"/>
+            <TextBlock FontFamily="./Resources/#NotoSans-Light" FontSize="10" HorizontalAlignment="Left" Margin="85,202,0,0" Grid.Row="1" TextWrapping="Wrap" Text="예은이와 체은이" VerticalAlignment="Top"/>
+
+            <Button Click="text_click" HorizontalAlignment="Left" Margin="-9,93,-4,0" VerticalAlignment="Top" Width="388" Height="79" HorizontalContentAlignment="Left" FontSize="30" BorderBrush="{x:Null}" Foreground="Black" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Auto" RenderTransformOrigin="0.5,0.5" Padding="1">
+
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.95"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+
+                <Button.Background>
+                    <ImageBrush Stretch="None">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform X="2490" Y="108"/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+                <Image  Height="48" Width="76" Source="C:\Users\user\source\repos\APP\APP\text_i.png"/>
+                <Button.Style>
+                    <Style TargetType="Button" >
+                        <Setter Property="OverridesDefaultStyle" Value="True" />
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Name="border" BorderThickness="0" BorderBrush="Black"  Background="{TemplateBinding Background}" CornerRadius="4">
+                                        <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="border" Property="Background" Value="SkyBlue"/>
+
+                                            <Setter Property="Opacity" Value="0.1" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+
+                    </Style>
+                </Button.Style>
+            </Button>
+
+
+            <Button Visibility="Visible" Click ="draw_click" Margin="0,180,-1,0" VerticalAlignment="Top" Width="376" Height="79" HorizontalContentAlignment="Left" IsCancel="True" FontSize="30" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush Stretch="None" ImageSource="C:\Users\user\source\repos\APP\image\main\jpg4.jpg">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform X="-30"/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+                <Image Height="36" Width="68" Source="C:\Users\user\source\repos\APP\APP\drawing (2).png"/>
+                <Button.Style>
+                    <Style TargetType="Button" >
+                        <Setter Property="OverridesDefaultStyle" Value="True" />
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="4">
+                                        <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="border" Property="Background" Value="SkyBlue"/>
+
+                                            <Setter Property="Opacity" Value="0.1" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Image Visibility =" Hidden" HorizontalAlignment="Left" Height="40" Margin="133,45,0,0" VerticalAlignment="Top" Width="130" Source="C:\Users\user\source\repos\APP\image\main\flip_clip.png"/>
+            <Button Content="Button" HorizontalAlignment="Left" Margin="315,49,0,0" VerticalAlignment="Top" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="27" Click="UpdateButton_click" OpacityMask="#FFEAF3F3">
+                <Button.Background>
+                    <ImageBrush ImageSource="C:\Users\user\source\repos\APP\image\upd_b.png"/>
+                </Button.Background>
+                <Button.Style>
+                    <Style TargetType="Button" >
+                        <Setter Property="OverridesDefaultStyle" Value="True" />
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="4">
+                                        <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="border" Property="Background" Value="SkyBlue"/>
+
+                                            <Setter Property="Opacity" Value="0.1" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+
+                    </Style>
+                </Button.Style>
+
+
+            </Button>
+            <Image HorizontalAlignment="Left" Height="16" Margin="-7,277,-8,0" VerticalAlignment="Top" Width="390" Source="C:\Users\user\source\repos\APP\image\main\lline.png" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2"/>
+            <Image HorizontalAlignment="Left" Height="16" Margin="-7,82,-8,0" VerticalAlignment="Top" Width="390" Source="C:\Users\user\source\repos\APP\image\main\lline.png" RenderTransformOrigin="0.5,0.5" Grid.Row="1"/>
+            <Image HorizontalAlignment="Left" Height="16" Margin="-6,257,-9,0" VerticalAlignment="Top" Width="390" Source="C:\Users\user\source\repos\APP\image\main\lline.png" RenderTransformOrigin="0.5,0.5" Grid.Row="1"/>
+            <Image HorizontalAlignment="Left" Height="16" Margin="-5,170,-10,0" VerticalAlignment="Top" Width="390" Source="C:\Users\user\source\repos\APP\image\main\lline.png" RenderTransformOrigin="0.5,0.5" Grid.Row="1"/>
+            <Image Visibility="Hidden" HorizontalAlignment="Left" Height="52" Margin="30,218,0,0" VerticalAlignment="Top" Width="221" Source="C:\Users\user\source\repos\APP\image\main\jpg1.jpg"/>
+            <Image Visibility="Hidden" HorizontalAlignment="Left" Height="58" Margin="27,19,0,0" VerticalAlignment="Top" Width="153" Source="C:\Users\user\source\repos\APP\image\main\jpg2.jpg" Grid.Row="1"/>
+            <ToggleSwitch:ToggleButton x:Name="switch_weather" HorizontalAlignment="Left" Height="29" Margin="294,232,0,0" VerticalAlignment="Top" Width="63" RenderTransformOrigin="0.345,0.39" MouseLeftButtonDown="Switch_weather_MouseLeftButtonDown" />
+            <ToggleSwitch:ToggleButton x:Name="switch_time" HorizontalAlignment="Left" Height="28" Margin="294,0,0,445" VerticalAlignment="Bottom" Width="63" RenderTransformOrigin="0.345,0.39" MouseLeftButtonDown="Switch_time_MouseLeftButtonDown" Grid.Row="1" />
+            <ToggleSwitch:ToggleButton x:Name="switch_text" HorizontalAlignment="Left" Height="30" Margin="294,120.5,0,0" VerticalAlignment="Top" Width="63" RenderTransformOrigin="0.345,0.39" MouseLeftButtonDown="Switch_text_MouseLeftButtonDown" Grid.Row="1" />
+            <ToggleSwitch:ToggleButton x:Name="switch_draw" HorizontalAlignment="Left" Height="29" Margin="294,204,0,0" VerticalAlignment="Top" Width="63" RenderTransformOrigin="0.345,0.39" MouseLeftButtonDown="Switch_draw_MouseLeftButtonDown" Grid.Row="1" />
+            <Label x:Name="clock" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" Margin="10,0,0,0" Foreground="White"  Height="31"/>
+            <TextBlock x:Name="text_weather" FontFamily="./Resources/#NotoSans-Light" FontSize="25" HorizontalAlignment="Left" Margin="82,241,0,0" TextWrapping="Wrap" Text="날씨" VerticalAlignment="Top" Height="33" Width="54"/>
+            <TextBlock FontFamily="C:\Users\user\source\repos\APP\image\font\#NotoSans-Light" FontSize="25" x:Name="clock_button" Text="오후" HorizontalAlignment="Left" Margin="81,40,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Height="36"/>
+            <Image HorizontalAlignment="Left" Height="43" Margin="15,222,0,0" VerticalAlignment="Top" Width="48" Source="C:\Users\user\source\repos\APP\APP\weather.png"/>
+            <Image HorizontalAlignment="Left" Height="49" Margin="11,25,0,0" VerticalAlignment="Top" Width="47" Grid.Row="1" Source="C:\Users\user\source\repos\APP\APP\time.png"/>
+            <TextBlock FontFamily="./Resources/#NotoSans-Light" FontSize="10" HorizontalAlignment="Left" Margin="82,26,0,0" Grid.Row="1" TextWrapping="Wrap" Text="대한민국" VerticalAlignment="Top"/>
+            <TextBlock FontFamily="./Resources/#NotoSans-Light" FontSize="10" HorizontalAlignment="Left" Margin="83,226,0,0" TextWrapping="Wrap" Text="경상북도 포항시 북구 흥해읍" VerticalAlignment="Top"/>
+
+
+
+
+
+        </Grid>
+
+        <Grid x:Name="Text_page" Visibility="Hidden" VerticalAlignment="Top" Height="812" Width="375" IsEnabled="True" Grid.ColumnSpan="2">
+
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\user\source\repos\APP\image\te_page_i.jpg" TileMode="FlipXY"/>
+            </Grid.Background>
+            <Button Content="Button" Click ="back_click"  HorizontalAlignment="Left" Margin="29,53,0,0" VerticalAlignment="Top" Width="16" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="26">
+                <Button.Background>
+                    <ImageBrush ImageSource="C:\Users\user\source\repos\APP\APP\arrow.png"/>
+                </Button.Background>
+            </Button>
+            <Image x:Name="TEXT" HorizontalAlignment="Left" Height="50" Margin="227,191,-13,0" VerticalAlignment="Top" Width="161" Source="C:\Users\user\source\repos\APP\APP\Text.png">
+            </Image>
+            <Image HorizontalAlignment="Left" Height="145" Margin="79,251,0,0" VerticalAlignment="Top" Width="276" Source="C:\Users\user\source\repos\APP\APP\text_board.png">
+            </Image>
+            <Image HorizontalAlignment="Left" Height="29" Margin="43,544,0,0" VerticalAlignment="Top" Width="39" Source="C:\Users\user\source\repos\APP\APP\content.png"/>
+            <TextBlock x:Name="textblock" HorizontalAlignment="Left" Margin="79,396,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="18"/>
+            <Image HorizontalAlignment="Left" Height="5" Margin="44,598,0,0" VerticalAlignment="Top" Width="183" Source="C:\Users\user\source\repos\APP\APP\line.png"/>
+            <Image HorizontalAlignment="Left" Height="5" Margin="44,598,0,0" VerticalAlignment="Top" Width="183" Source="C:\Users\user\source\repos\APP\APP\line.png"/>
+
+            <Image HorizontalAlignment="Left" Height="5" Margin="46,628,0,0" VerticalAlignment="Top" Width="183" Source="C:\Users\user\source\repos\APP\APP\line.png"/>
+            <Button Content="Button" HorizontalAlignment="Left" Margin="300,45,0,0" VerticalAlignment="Top" Width="46" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="34" Click="save_click">
+                <Button.Background>
+                    <ImageBrush ImageSource="C:\Users\user\source\repos\APP\image\sa.png"/>
+                </Button.Background>
+            </Button>
+            <Image Visibility="Hidden" HorizontalAlignment="Left" Height="29" Margin="43,475,0,0" VerticalAlignment="Top" Width="50" Source="C:\Users\user\source\repos\APP\APP\Title.png"/>
+            <Image Visibility ="Hidden" HorizontalAlignment="Left" Height="3" Margin="44,504,0,0" VerticalAlignment="Top" Width="125" Source="C:\Users\user\source\repos\APP\APP\short_line.png"/>
+            <TextBox x:Name="textbox" HorizontalAlignment="Left" Height="20" Margin="43,578,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Background="{x:Null}" BorderBrush="{x:Null}" />
+
+
+        </Grid>
+        <Grid x:Name="Draw_page" Visibility="Hidden"  VerticalAlignment="Top" Height="374" IsEnabled="True" Margin="-208,205,-204,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.195"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\user\source\repos\APP\image\draw_p.png" TileMode="FlipXY"/>
+            </Grid.Background>
+            <Button x:Name="back" Content="Button" HorizontalAlignment="Left" Margin="24,29,0,0" VerticalAlignment="Top" Width="26" Height="26" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Back_Click_1">
+                <Button.Background>
+                    <ImageBrush ImageSource="C:\Users\user\source\repos\APP\image\sub2\arrow.png" TileMode="FlipXY" Stretch="None"/>
+                </Button.Background>
+            </Button>
+
+            <Grid x:Name="MonitorGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="105"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Label x:Name="DrawingPageTitle"  Style="{StaticResource CustomFont}"  Content="DRAWING" HorizontalAlignment="Left" Margin="333,22,0,0" VerticalAlignment="Top" Width="129" FontFamily="Georgia" FontSize="26"/>
+            <Button x:Name="DrawPageSaveButton" Content="Button" HorizontalAlignment="Left" Margin="715,14,0,0" VerticalAlignment="Top" Width="57" Height="49" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="DrawPageSaveButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="C:\Users\user\source\repos\APP\image\SaveWhite.png" Stretch="None"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="initialization" Content="Button" HorizontalAlignment="Left" Margin="305,311,0,0" VerticalAlignment="Top" Width="75" Click="InitializationButton_Click"/>
+            <Button Content="Button" HorizontalAlignment="Left" Margin="429,311,0,0" VerticalAlignment="Top" Width="75"/>
+        </Grid>
+
+    </Grid>
+</Window>
